@@ -11,6 +11,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
+
   const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
   useEffect(() => {
@@ -88,7 +89,7 @@ const App = () => {
 
   return (
     <div
-      className="w-screen h-screen flex flex-col items-center justify-center min-h-screen relative"
+      className="w-screen h-screen flex flex-col items-center justify-center  relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #d1eaff 0%, #b8a5ff 50%, #ffdde1 100%)',
         backgroundAttachment: 'fixed',
@@ -96,9 +97,9 @@ const App = () => {
       }}
     >
       {/* Gradient light overlays for layered glassmorphism */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 -z-10 pointer-events-none">
-        <div className="absolute left-[-20vw] top-[-20vw] w-[65vw] h-[65vw] bg-blue-200 bg-opacity-40 rounded-full blur-3xl"></div>
-        <div className="absolute right-[-18vw] bottom-[-18vw] w-[48vw] h-[48vw] bg-pink-100 bg-opacity-50 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 right-0   pointer-events-none">
+        <div className="absolute left-[-20vw] top-0 w-[65vw] h-screen bg-blue-200 bg-opacity-40 rounded-full blur-3xl"></div>
+        <div className="absolute right-[-18vw] w-[48vw] h-screen bg-pink-100 bg-opacity-50 rounded-full blur-3xl"></div>
       </div>
 
       {/* Main centered column */}
